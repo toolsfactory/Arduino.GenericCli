@@ -20,7 +20,7 @@
   ],
   "authors": [
     {
-      "name": "ToolsFactory",
+      "name": "Toolsfactory",
       "email": "info@toolsfactory.org",
       "url": "https://github.com/toolsfactory",
       "maintainer": true
@@ -33,34 +33,16 @@
   "homepage": "https://github.com/toolsfactory/Arduino.GenericCli",
   "license": "MIT",
   "frameworks": [
-    "arduino",
-    "espidf"
+    "arduino"
   ],
   "platforms": [
-    "espressif32",
-    "espressif8266"
+    "arduino"
   ],
   "headers": [
     "generic_cli.h",
     "cli_standard_commands.h"
   ],
-  "export": {
-    "include": [
-      "src/*",
-      "examples/*",
-      "README.md",
-      "LICENSE",
-      "library.properties",
-      "library.json"
-    ],
-    "exclude": [
-      "*.git*",
-      "*.vscode*",
-      "*.pio*",
-      "test/*",
-      "docs/*"
-    ]
-  },
+  
   "dependencies": [
     {
       "name": "ArduinoJson",
@@ -68,41 +50,5 @@
       "optional": true,
       "note": "Required only for advanced examples with JSON support"
     }
-  ],
-  "examples": [
-    {
-      "name": "Arduino IDE Basic Example",
-      "base": "examples/arduino_ide_example",
-      "files": [
-        "arduino_ide_example.ino",
-        "README.md"
-      ]
-    },
-    {
-      "name": "PlatformIO Basic Example", 
-      "base": "examples/basic_cli_example",
-      "files": [
-        "src/main.cpp",
-        "platformio.ini",
-        "README.md"
-      ]
-    },
-    {
-      "name": "PlatformIO Advanced Example",
-      "base": "examples/advanced_cli_example", 
-      "files": [
-        "src/main.cpp",
-        "platformio.ini",
-        "README.md"
-      ]
-    }
-  ],
-  "build": {
-    "flags": [
-      "-std=c++11"
-    ],
-    "unflags": [
-      "-std=gnu++98"
-    ]
-  }
+  ]
 }
