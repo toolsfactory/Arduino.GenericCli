@@ -1,0 +1,108 @@
+{
+  "name": "GenericCLI",
+  "version": "1.0.0",
+  "description": "A comprehensive command-line interface library for Arduino and ESP32 microcontrollers with advanced features like argument parsing, command history, ANSI colors, and extensible command system.",
+  "keywords": [
+    "cli",
+    "command-line",
+    "terminal",
+    "console",
+    "esp32",
+    "arduino",
+    "iot",
+    "interface",
+    "debugging",
+    "ansi",
+    "colors",
+    "history",
+    "parsing",
+    "commands"
+  ],
+  "authors": [
+    {
+      "name": "ToolsFactory",
+      "email": "info@toolsfactory.org",
+      "url": "https://github.com/toolsfactory",
+      "maintainer": true
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toolsfactory/Arduino.GenericCli.git"
+  },
+  "homepage": "https://github.com/toolsfactory/Arduino.GenericCli",
+  "license": "MIT",
+  "frameworks": [
+    "arduino",
+    "espidf"
+  ],
+  "platforms": [
+    "espressif32",
+    "espressif8266"
+  ],
+  "headers": [
+    "generic_cli.h",
+    "cli_standard_commands.h"
+  ],
+  "export": {
+    "include": [
+      "src/*",
+      "examples/*",
+      "README.md",
+      "LICENSE",
+      "library.properties",
+      "library.json"
+    ],
+    "exclude": [
+      "*.git*",
+      "*.vscode*",
+      "*.pio*",
+      "test/*",
+      "docs/*"
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "ArduinoJson",
+      "version": "^6.21.0",
+      "optional": true,
+      "note": "Required only for advanced examples with JSON support"
+    }
+  ],
+  "examples": [
+    {
+      "name": "Arduino IDE Basic Example",
+      "base": "examples/arduino_ide_example",
+      "files": [
+        "arduino_ide_example.ino",
+        "README.md"
+      ]
+    },
+    {
+      "name": "PlatformIO Basic Example", 
+      "base": "examples/basic_cli_example",
+      "files": [
+        "src/main.cpp",
+        "platformio.ini",
+        "README.md"
+      ]
+    },
+    {
+      "name": "PlatformIO Advanced Example",
+      "base": "examples/advanced_cli_example", 
+      "files": [
+        "src/main.cpp",
+        "platformio.ini",
+        "README.md"
+      ]
+    }
+  ],
+  "build": {
+    "flags": [
+      "-std=c++11"
+    ],
+    "unflags": [
+      "-std=gnu++98"
+    ]
+  }
+}
